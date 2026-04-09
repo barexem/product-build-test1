@@ -30,16 +30,37 @@ document.addEventListener('DOMContentLoaded', () => {
             numbers.add(randomNumber);
         }
 
-        displayNumbers(Array.from(numbers).sort((a, b) => a - b));
+        const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
+        
+        let bonusNumber;
+        do {
+            bonusNumber = Math.floor(Math.random() * 45) + 1;
+        } while (numbers.has(bonusNumber));
+
+        displayNumbers(sortedNumbers, bonusNumber);
     }
 
-    function displayNumbers(numbers) {
+    function displayNumbers(numbers, bonus) {
         numbersContainer.innerHTML = '';
-        for (const number of numbers) {
+        
+        // Main numbers
+        numbers.forEach(number => {
             const numberDiv = document.createElement('div');
             numberDiv.className = 'number';
             numberDiv.textContent = number;
             numbersContainer.appendChild(numberDiv);
-        }
+        });
+
+        // Separator
+        const separator = document.createElement('div');
+        separator.className = 'separator';
+        separator.textContent = '+';
+        numbersContainer.appendChild(separator);
+
+        // Bonus number
+        const bonusDiv = document.createElement('div');
+        bonusDiv.className = 'number bonus';
+        bonusDiv.textContent = bonus;
+        numbersContainer.appendChild(bonusDiv);
     }
 });

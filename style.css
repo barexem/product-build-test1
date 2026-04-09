@@ -47,6 +47,7 @@ h1 {
 .numbers-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -63,6 +64,21 @@ h1 {
     align-items: center;
     font-weight: bold;
     transition: background-color 0.3s;
+}
+
+.number.bonus {
+    background-color: #f1c40f;
+}
+
+.dark-mode .number.bonus {
+    background-color: #f39c12;
+}
+
+.separator {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0 5px;
 }
 
 #generate-btn {
