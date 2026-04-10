@@ -1,66 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const generateBtn = document.getElementById('generate-btn');
-    const numbersContainer = document.getElementById('numbers');
-    const themeToggle = document.getElementById('theme-toggle');
-    const body = document.body;
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeToggle.textContent = 'Light Mode';
-    }
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
 
-    // Theme toggle logic
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        const isDark = body.classList.contains('dark-mode');
-        localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        themeToggle.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-    });
-
-    generateBtn.addEventListener('click', () => {
-        generateNumbers();
-    });
-
-    function generateNumbers() {
-        const numbers = new Set();
-        while (numbers.size < 6) {
-            const randomNumber = Math.floor(Math.random() * 45) + 1;
-            numbers.add(randomNumber);
-        }
-
-        const sortedNumbers = Array.from(numbers).sort((a, b) => a - b);
-        
-        let bonusNumber;
-        do {
-            bonusNumber = Math.floor(Math.random() * 45) + 1;
-        } while (numbers.has(bonusNumber));
-
-        displayNumbers(sortedNumbers, bonusNumber);
-    }
-
-    function displayNumbers(numbers, bonus) {
-        numbersContainer.innerHTML = '';
-        
-        // Main numbers
-        numbers.forEach(number => {
-            const numberDiv = document.createElement('div');
-            numberDiv.className = 'number';
-            numberDiv.textContent = number;
-            numbersContainer.appendChild(numberDiv);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 70, // Offset for fixed header
+                    behavior: 'smooth'
+                });
+            }
         });
+    });
 
-        // Separator
-        const separator = document.createElement('div');
-        separator.className = 'separator';
-        separator.textContent = '+';
-        numbersContainer.appendChild(separator);
+    // Simple scroll reveal effect
+    const observerOptions = {
+        threshold: 0.1
+    };
 
-        // Bonus number
-        const bonusDiv = document.createElement('div');
-        bonusDiv.className = 'number bonus';
-        bonusDiv.textContent = bonus;
-        numbersContainer.appendChild(bonusDiv);
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'all 0.6s ease-out';
+        observer.observe(section);
+    });
 });
