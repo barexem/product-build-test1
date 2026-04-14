@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
             copyright_text: "황순신의 오라클 DB 강의. All rights reserved."
         },
         en: {
-            page_title: "Soonshin Hwang's Oracle DB - Specialized Oracle Database Lectures",
+            page_title: "SunShin Hwang's Oracle DB - Specialized Oracle Database Lectures",
             logo: "Oracle DB Lecture",
             nav_why: "Why this lecture?",
             nav_curriculum: "Curriculum",
             nav_recommend: "Who is it for?",
             nav_contact: "Contact",
             hero_h1: "Specialized Oracle Database Lectures",
-            hero_h2: "Soonshin Hwang's Oracle DB",
+            hero_h2: "SunShin Hwang's Oracle DB",
             hero_p: "Practical architecture learning, performance tuning, and hands-on curriculum to develop real-world troubleshooting skills.",
             hero_btn_view: "View Lectures",
             hero_btn_contact: "Contact",
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footer_label_resources: "Resources",
             footer_blog_text: "ORACLEINTERNAL Blog",
             footer_desc: "Professional lectures on Oracle Architecture / Tuning / Troubleshooting",
-            copyright_text: "Soonshin Hwang's Oracle DB Lecture. All rights reserved."
+            copyright_text: "SunShin Hwang's Oracle DB Lecture. All rights reserved."
         }
     };
 
