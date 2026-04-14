@@ -262,9 +262,34 @@ footer {
     align-items: flex-end;
 }
 
+.contact-title-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
 .contact-info h3 {
     color: var(--accent-color);
-    margin-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.blog-link {
+    margin-left: 20px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+.blog-link:hover {
+    color: var(--white);
+}
+
+.blog-link i {
+    margin-right: 5px;
+    color: var(--accent-color);
 }
 
 .contact-info p {
