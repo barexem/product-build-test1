@@ -44,6 +44,33 @@ nav {
     height: 70px;
 }
 
+.lang-switch {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
+.lang-switch button {
+    background: none;
+    border: none;
+    color: var(--gray);
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0 5px;
+    transition: var(--transition);
+}
+
+.lang-switch button.active {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.lang-switch button:hover {
+    color: var(--accent-color);
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: 800;

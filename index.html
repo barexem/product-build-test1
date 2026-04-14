@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>황순신의 오라클 DB 강의 - Oracle Database 전문 강의</title>
+    <title data-i18n="page_title">황순신의 오라클 DB 강의 - Oracle Database 전문 강의</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -11,13 +11,18 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">Oracle DB 강의</div>
-                <ul>
-                    <li><a href="#about">왜 이 강의인가요?</a></li>
-                    <li><a href="#curriculum">강의 내용</a></li>
-                    <li><a href="#recommend">추천 대상</a></li>
-                    <li><a href="#contact">문의하기</a></li>
+                <div class="logo" data-i18n="logo">Oracle DB 강의</div>
+                <ul class="nav-links">
+                    <li><a href="#about" data-i18n="nav_why">왜 이 강의인가요?</a></li>
+                    <li><a href="#curriculum" data-i18n="nav_curriculum">강의 내용</a></li>
+                    <li><a href="#recommend" data-i18n="nav_recommend">추천 대상</a></li>
+                    <li><a href="#contact" data-i18n="nav_contact">문의하기</a></li>
                 </ul>
+                <div class="lang-switch">
+                    <button id="btn-ko" class="active">KO</button>
+                    <span>|</span>
+                    <button id="btn-en">EN</button>
+                </div>
             </nav>
         </div>
     </header>
@@ -25,12 +30,12 @@
     <section id="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Oracle Database 전문 강의</h1>
-                <h2>황순신의 오라클 DB 강의</h2>
-                <p>실무 중심의 아키텍처 학습, 성능 튜닝, 그리고 실제 장애 대응 역량을 키우는 현장형 커리큘럼을 제공합니다.</p>
+                <h1 data-i18n="hero_h1">Oracle Database 전문 강의</h1>
+                <h2 data-i18n="hero_h2">황순신의 오라클 DB 강의</h2>
+                <p data-i18n="hero_p">실무 중심의 아키텍처 학습, 성능 튜닝, 그리고 실제 장애 대응 역량을 키우는 현장형 커리큘럼을 제공합니다.</p>
                 <div class="cta-buttons">
-                    <a href="#curriculum" class="btn btn-primary">강의 보기</a>
-                    <a href="#contact" class="btn btn-secondary">문의하기</a>
+                    <a href="#curriculum" class="btn btn-primary" data-i18n="hero_btn_view">강의 보기</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_contact">문의하기</a>
                 </div>
             </div>
         </div>
@@ -39,24 +44,24 @@
     <section id="about">
         <div class="container">
             <div class="section-header">
-                <h2>왜 이 강의인가요?</h2>
-                <p>입문자에서 실무자까지, 오라클 전문가가 되기 위한 최적의 로드맵</p>
+                <h2 data-i18n="about_h2">왜 이 강의인가요?</h2>
+                <p data-i18n="about_p">입문자에서 실무자까지, 오라클 전문가가 되기 위한 최적의 로드맵</p>
             </div>
             <div class="about-grid">
                 <div class="about-item">
                     <i class="fas fa-users"></i>
-                    <h3>대상</h3>
-                    <p>주니어 DBA, 개발자, 인프라 운영자</p>
+                    <h3 data-i18n="about_target_h3">대상</h3>
+                    <p data-i18n="about_target_p">주니어 DBA, 개발자, 인프라 운영자</p>
                 </div>
                 <div class="about-item">
                     <i class="fas fa-layer-group"></i>
-                    <h3>범위</h3>
-                    <p>기초부터 SQL, 아키텍처, 튜닝, 장애 분석까지</p>
+                    <h3 data-i18n="about_scope_h3">범위</h3>
+                    <p data-i18n="about_scope_p">기초부터 SQL, 아키텍처, 튜닝, 장애 분석까지</p>
                 </div>
                 <div class="about-item">
                     <i class="fas fa-laptop-code"></i>
-                    <h3>방법</h3>
-                    <p>핵심 이론 + 실무 실습 + 실제 사례 기반 학습</p>
+                    <h3 data-i18n="about_method_h3">방법</h3>
+                    <p data-i18n="about_method_p">핵심 이론 + 실무 실습 + 실제 사례 기반 학습</p>
                 </div>
             </div>
         </div>
@@ -65,43 +70,43 @@
     <section id="curriculum">
         <div class="container">
             <div class="section-header">
-                <h2>주요 강의 내용</h2>
+                <h2 data-i18n="curr_h2">주요 강의 내용</h2>
             </div>
             <div class="curriculum-grid">
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-database"></i></div>
-                    <h3>ORACLE 기초</h3>
+                    <h3 data-i18n="curr_card1_h3">ORACLE 기초</h3>
                     <ul>
-                        <li>오라클 아키텍처 이해</li>
-                        <li>인스턴스 및 데이터 파일 관리</li>
-                        <li>세그먼트 및 테이블스페이스</li>
+                        <li data-i18n="curr_card1_li1">오라클 아키텍처 이해</li>
+                        <li data-i18n="curr_card1_li2">인스턴스 및 데이터 파일 관리</li>
+                        <li data-i18n="curr_card1_li3">세그먼트 및 테이블스페이스</li>
                     </ul>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-bolt"></i></div>
-                    <h3>SQL & 성능 튜닝</h3>
+                    <h3 data-i18n="curr_card2_h3">SQL & 성능 튜닝</h3>
                     <ul>
-                        <li>실행 계획(Execution Plan) 분석</li>
-                        <li>인덱스 전략 및 최적화</li>
-                        <li>옵티마이저 힌트(Hints) 활용</li>
+                        <li data-i18n="curr_card2_li1">실행 계획(Execution Plan) 분석</li>
+                        <li data-i18n="curr_card2_li2">인덱스 전략 및 최적화</li>
+                        <li data-i18n="curr_card2_li3">옵티마이저 힌트(Hints) 활용</li>
                     </ul>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-network-wired"></i></div>
-                    <h3>RAC / ASM 운영</h3>
+                    <h3 data-i18n="curr_card3_h3">RAC / ASM 운영</h3>
                     <ul>
-                        <li>고가용성(HA) 환경 구성</li>
-                        <li>RAC 아키텍처 및 장애 복구</li>
-                        <li>ASM 스토리지 관리 실무</li>
+                        <li data-i18n="curr_card3_li1">고가용성(HA) 환경 구성</li>
+                        <li data-i18n="curr_card3_li2">RAC 아키텍처 및 장애 복구</li>
+                        <li data-i18n="curr_card3_li3">ASM 스토리지 관리 실무</li>
                     </ul>
                 </div>
                 <div class="card">
                     <div class="card-icon"><i class="fas fa-exclamation-triangle"></i></div>
-                    <h3>장애 분석 실무</h3>
+                    <h3 data-i18n="curr_card4_h3">장애 분석 실무</h3>
                     <ul>
-                        <li>주요 ORA 에러 케이스 분석</li>
-                        <li>Trace 및 Log 파일 분석법</li>
-                        <li>데이터 백업 및 긴급 복구 전략</li>
+                        <li data-i18n="curr_card4_li1">주요 ORA 에러 케이스 분석</li>
+                        <li data-i18n="curr_card4_li2">Trace 및 Log 파일 분석법</li>
+                        <li data-i18n="curr_card4_li3">데이터 백업 및 긴급 복구 전략</li>
                     </ul>
                 </div>
             </div>
@@ -111,13 +116,13 @@
     <section id="recommend">
         <div class="container">
             <div class="section-header">
-                <h2>이런 분께 추천합니다</h2>
+                <h2 data-i18n="recom_h2">이런 분께 추천합니다</h2>
             </div>
             <ul class="recommend-list">
-                <li><i class="fas fa-check-circle"></i> 오라클 데이터베이스의 기본기를 다지고 싶은 입문자</li>
-                <li><i class="fas fa-check-circle"></i> SQL 튜닝 및 성능 최적화 역량을 키우고 싶은 개발자</li>
-                <li><i class="fas fa-check-circle"></i> 실제 장애 대응 및 트러블슈팅 경험이 필요한 DBA</li>
-                <li><i class="fas fa-check-circle"></i> 인프라 전반의 데이터베이스 운영 능력을 강화하고 싶은 관리자</li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="recom_li1">오라클 데이터베이스의 기본기를 다지고 싶은 입문자</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="recom_li2">SQL 튜닝 및 성능 최적화 역량을 키우고 싶은 개발자</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="recom_li3">실제 장애 대응 및 트러블슈팅 경험이 필요한 DBA</span></li>
+                <li><i class="fas fa-check-circle"></i> <span data-i18n="recom_li4">인프라 전반의 데이터베이스 운영 능력을 강화하고 싶은 관리자</span></li>
             </ul>
         </div>
     </section>
@@ -127,21 +132,21 @@
             <div class="footer-content">
                 <div class="contact-info">
                     <div class="footer-row">
-                        <span class="footer-label">문의 안내</span>
+                        <span class="footer-label" data-i18n="footer_label_contact">문의 안내</span>
                         <span class="footer-value"><i class="fas fa-envelope"></i> barexem@gmail.com</span>
                     </div>
                     <div class="footer-row">
-                        <span class="footer-label">기술 자료</span>
+                        <span class="footer-label" data-i18n="footer_label_resources">기술 자료</span>
                         <span class="footer-value">
                             <a href="https://oracleinternal.tistory.com" class="blog-link" target="_blank">
-                                <i class="fas fa-rss"></i> ORACLEINTERNAL 블로그
+                                <i class="fas fa-rss"></i> <span data-i18n="footer_blog_text">ORACLEINTERNAL 블로그</span>
                             </a>
                         </span>
                     </div>
-                    <p class="footer-desc">Oracle Architecture / Tuning / Troubleshooting 전문 강의</p>
+                    <p class="footer-desc" data-i18n="footer_desc">Oracle Architecture / Tuning / Troubleshooting 전문 강의</p>
                 </div>
                 <div class="copyright">
-                    <p>&copy; 2026 황순신의 오라클 DB 강의. All rights reserved.</p>
+                    <p>&copy; 2026 <span data-i18n="copyright_text">황순신의 오라클 DB 강의. All rights reserved.</span></p>
                 </div>
             </div>
         </div>
